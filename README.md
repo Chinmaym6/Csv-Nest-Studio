@@ -38,8 +38,8 @@ Backend:
 ### 🔹 Clone the Repository
 
 ```bash
-[git clone https://github.com/your-username/csv-collab-manager.git](https://github.com/Chinmaym6/Csv-Nest-Studio.git)
-cd csv-collab-manager
+git clone https://github.com/Chinmaym6/Csv-Nest-Studio.git
+cd csv-file-manager
 ```
 ### 🔹 Set Up the Backend
 
