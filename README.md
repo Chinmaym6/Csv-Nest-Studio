@@ -28,7 +28,10 @@ Backend:
 - JWT for Auth
 - Multer for File Uploads
 
----
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![Node](https://img.shields.io/badge/Backend-Node.js-green)
+![Express](https://img.shields.io/badge/Server-Express.js-white)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
 
 ## 🧰 Getting Started
 
@@ -80,7 +83,4 @@ Upload and manage CSV files!
 ### 📊 Table
 ![Table](assets/Open_csv_page.png)
 
-![React](https://img.shields.io/badge/Frontend-React-blue)
-![Node](https://img.shields.io/badge/Backend-Node.js-green)
-![Express](https://img.shields.io/badge/Server-Express.js-black)
-![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
+
