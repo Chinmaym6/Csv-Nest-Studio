@@ -79,3 +79,8 @@ Upload and manage CSV files!
 
 ### 📊 Table
 ![Table](assets/Open_csv_page.png)
+
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![Node](https://img.shields.io/badge/Backend-Node.js-green)
+![Express](https://img.shields.io/badge/Server-Express.js-black)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
