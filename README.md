@@ -45,7 +45,7 @@ cd backend
 npm install
 
 ```
-### 🔹 Set Up the Backend
+### 🔹 Create a .env file inside the backend directory:
 
 JWT_SECRET=your_secret_key_here
 
@@ -64,10 +64,6 @@ npm install
 npm start
 
 ```
-
-### 🔹 Set Up the Backend
-
-
 
 ### 🔹 Now you’re ready!
 
