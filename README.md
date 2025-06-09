@@ -37,5 +37,41 @@ Backend:
 ```bash
 git clone https://github.com/your-username/csv-collab-manager.git
 cd csv-collab-manager
+```
+### 🔹 Set Up the Backend
 
+```bash
+cd backend
+npm install
+
+```
+### 🔹 Set Up the Backend
+
+JWT_SECRET=your_secret_key_here
+
+### 🔹 Start the backend server: 
+
+```bash
+node index.js
+
+```
+
+### 🔹 Set Up the Frontend
+
+```bash
+cd frontend
+npm install
+npm start
+
+```
+
+### 🔹 Set Up the Backend
+
+
+
+### 🔹 Now you’re ready!
+
+Visit http://localhost:3000
+Sign up or log in
+Upload and manage CSV files!
 
