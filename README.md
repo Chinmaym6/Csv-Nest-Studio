@@ -67,7 +67,7 @@ npm start
 
 ### 🔹 Now you’re ready!
 
-Visit http://localhost:3000
-Sign up or log in
+Visit http://localhost:3000,
+Sign up or log in,
 Upload and manage CSV files!
 
