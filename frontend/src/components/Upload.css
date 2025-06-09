@@ -1,0 +1,86 @@
+:root {
+  --primary: #4a90e2;
+  --accent:  #50e3c2;
+  --dark:    rgba(0,0,0,0.6);
+  --card-bg: rgba(255,255,255,0.15);
+  --dash:    rgba(255,255,255,0.6);
+}
+
+/* Full-page hero background & overlay */
+.upload-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('./hero.png') center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.upload-hero .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--dark);
+  mix-blend-mode: multiply;
+}
+
+/* Frosted-glass card */
+.upload-card {
+  position: relative; z-index:1;
+  width: 90%;
+  max-width: 480px;
+  padding: 2.5rem 2rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+  text-align: center;
+  color: #fff;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+/* Headings */
+.upload-card h2 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.5px;
+}
+.upload-card .subtitle {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+}
+
+/* DropZone styling */
+.upload-card .dropzone {
+  position: relative;
+  padding: 2rem;
+  border: 2px dashed var(--dash);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.upload-card .dropzone:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: #fff;
+}
+.upload-card .dropzone:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.upload-card .dropzone-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  opacity: 0.9;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,21 @@
+
+
+:root {
+  --primary-color: #4a90e2;
+  --accent-color:  #f5a623;
+  --bg-color:      #f5f7fa;
+  --text-color:    #333;
+  --error-color:   #e74c3c;
+  --font-family:   'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  height: 100%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+button { cursor: pointer; font-family: inherit; }
+a { text-decoration: none; color: var(--primary-color); }
+a:hover { text-decoration: underline; }

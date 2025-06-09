@@ -1,0 +1,95 @@
+:root {
+  --primary: #4a90e2;
+  --accent:  #50e3c2;
+  --dark:    rgba(0,0,0,0.6);
+}
+
+.home-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('./hero.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--dark);
+  mix-blend-mode: multiply;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 600px;
+  padding: 2rem;
+  animation: fadeIn 1s ease-out both;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-login {
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+  color: #fff;
+}
+
+.btn-signup {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn-signup:hover {
+  background: #fff;
+  color: var(--primary);
+  border-color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Make sure to reset default body margins/etc in your global CSS */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}

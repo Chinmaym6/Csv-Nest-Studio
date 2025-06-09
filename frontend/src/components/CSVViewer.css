@@ -1,0 +1,310 @@
+.csv-viewer {
+  padding: 2rem;
+  background: var(--bg-color);
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--font-family);
+}
+
+.csv-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+}
+
+.csv-header button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.back-btn {
+  background: var(--primary-color);
+  color: #fff;
+}
+.back-btn:hover {
+  background: var(--accent-color);
+}
+
+.download-btn {
+  background: #3498db;
+  color: #fff;
+}
+.download-btn:hover {
+  background: #2980b9;
+}
+
+.save-btn {
+  background: #27ae60;
+  color: #fff;
+}
+.save-btn:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+.save-btn:not(:disabled):hover {
+  background: #219150;
+}
+
+.logout-btn {
+  background: var(--accent-color);
+  color: #fff;
+}
+.logout-btn:hover {
+  background: var(--primary-color);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  min-width: 600px;
+}
+
+.data-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #e1e4e8;
+  z-index: 1;
+}
+
+.data-table tbody tr {
+  transition: background 0.2s;
+}
+.data-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+.data-table tbody tr:hover {
+  background: #eef6ff;
+}
+
+.edited-row {
+  background: #fff4e5 !important;
+}
+
+.data-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.edit-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
+}
+
+.no-data {
+  padding: 2rem;
+  text-align: center;
+  color: #777;
+  font-style: italic;
+}
+
+/* Search input */
+.search-input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  margin-right: 0.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
+}
+
+/* Search box */
+.search-input {
+  flex: 1;
+  max-width: 250px;
+  padding: 0.5rem 0.75rem;
+  margin: 0 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
+}
+
+/* Add Column & Add Row buttons */
+.add-column-btn,
+.add-row-btn {
+  background: #8e44ad;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+.add-column-btn:hover,
+.add-row-btn:hover {
+  background: #732d91;
+}
+
+/* Tweak header layout */
+.csv-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Ensure search input sits nicely */
+.search-input {
+  flex: 1;
+  max-width: 200px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Align action buttons */
+.action-buttons > button {
+  margin-left: 0.5rem;
+}
+.add-column-btn,
+.add-row-btn {
+  background: #8e44ad;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+.add-column-btn:hover,
+.add-row-btn:hover {
+  background: #732d91;
+}
+
+.collab-btn {
+  background: #e67e22;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+.collab-btn:hover {
+  background: #d35400;
+}
+
+.del-col-btn {
+  margin-left: 0.4rem;
+  background: transparent;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+  font-size: 0.9rem;
+  vertical-align: middle;
+  transition: color 0.2s;
+}
+.del-col-btn:hover {
+  color: #e74c3c;
+}
+
+/* Delete-row button */
+.del-row-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #c0392b;
+  transition: color 0.2s;
+}
+.del-row-btn:hover {
+  color: #e74c3c;
+}
+
+/* Make each <th> a positioning context */
+.data-table thead th {
+  position: relative; /* ensure the delete button can be placed absolutely */
+  padding-right: 2.5rem; /* leave room for the icon */
+}
+
+/* Stylish round delete-column button */
+.del-col-btn {
+  position: absolute;
+  top: 50%;
+  right: 0.9rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: rgba(0, 0, 0, 0.04);
+  border: none;
+  border-radius: 50%;
+  color: #c0392b;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.del-col-btn:hover {
+  background: rgba(192, 57, 43, 0.12);
+  color: #e74c3c;
+}
+
+.del-col-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.4);
+}
+
+/* Undo/Redo icons */
+.icon-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: color 0.2s;
+}
+.icon-btn:disabled {
+  color: #bbb;
+  cursor: default;
+}
+.icon-btn:not(:disabled):hover {
+  color: var(--accent-color);
+}
+
+/* Save button styling */
+.save-btn {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.save-btn:hover {
+  background: var(--primary-color);
+}

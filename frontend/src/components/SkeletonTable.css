@@ -1,0 +1,23 @@
+.skeleton-table {
+  width: 100%;
+}
+.skeleton-row {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+.skeleton-row.header {
+  margin-bottom: 1rem;
+}
+.skeleton-cell {
+  flex: 1;
+  height: 1.25rem;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-right: 0.75rem;
+}
+.skeleton-cell:last-child {
+  margin-right: 0;
+}
+.skeleton-cell.header-cell {
+  height: 1.5rem;
+}
