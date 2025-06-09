@@ -16,6 +16,11 @@ A full-stack web application that allows users to upload, manage, and collaborat
 
 ## 🛠️ Tech Stack
 
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![Node](https://img.shields.io/badge/Backend-Node.js-green)
+![Express](https://img.shields.io/badge/Server-Express.js-white)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
+
 Frontend:
 - React
 - React Router
@@ -27,11 +32,6 @@ Backend:
 - Express.js
 - JWT for Auth
 - Multer for File Uploads
-
-![React](https://img.shields.io/badge/Frontend-React-blue)
-![Node](https://img.shields.io/badge/Backend-Node.js-green)
-![Express](https://img.shields.io/badge/Server-Express.js-white)
-![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
 
 ## 🧰 Getting Started
 
