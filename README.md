@@ -71,3 +71,11 @@ Visit http://localhost:3000,
 Sign up or log in,
 Upload and manage CSV files!
 
+### 📊 Home
+![Home](assets/Home_page.png)
+
+### 📊 Dashboard
+![Dashboard](assets/Dashboard_page.png)
+
+### 📊 Table
+![Table](assets/Open_csv_page.png)
