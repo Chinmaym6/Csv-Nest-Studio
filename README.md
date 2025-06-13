@@ -84,5 +84,3 @@ Upload and manage CSV files!
 ![Table](assets/Open_csv_page.png)
 
 
-![GitHub issues closed](https://img.shields.io/github/issues-closed/Chinmaym6/Dorm-Room-Trading-Post)
-
