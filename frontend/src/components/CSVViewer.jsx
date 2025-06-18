@@ -131,46 +131,45 @@ export default function CSVViewer() {
     }));
   };
 
-  const handleSave = async () => {
-    // new rows
-    for (const r of data.filter(r=>r._isNew)) {
-      const { _rowId, _isNew, _isEdited, ...rowData } = r;
-      try {
-        const res = await api.post(`/files/${id}/data`, { rowData });
-        r._rowId = res.data.id; //We replace the temporary _rowId with the real DB ID.
-        delete r._isNew;
-      } catch {
-        return addToast('Failed to add new row','error');
-      }
-    }
-    // updates
-    const updates = data
-      .filter(r=>!r._isNew && r._isEdited)
-      .map(r => {
-        const { _rowId, _isEdited, ...rowData } = r;
-        return { id: _rowId, rowData };
-      });
-
+const handleSave = useCallback(async () => {
+  for (const r of data.filter(r=>r._isNew)) {
+    const { _rowId, _isNew, _isEdited, ...rowData } = r;
     try {
-      await api.put(`/files/${id}/data`, {
-        updates,
-        deletedColumns: deletedCols,
-        deletedRows
-      });
+      const res = await api.post(`/files/${id}/data`, { rowData });
+      r._rowId = res.data.id;
+      delete r._isNew;
     } catch {
-      return addToast('Failed to save changes','error');
+      return addToast('Failed to add new row','error');
     }
+  }
 
-    // clear flags & history
-    const fresh = {
-      data: data.map(r=>{ delete r._isEdited; return r; }),
-      cols,
-      deletedCols: [],
-      deletedRows: []
-    };
-    reset(fresh);
-    addToast('Changes saved!','success');
+  const updates = data
+    .filter(r=>!r._isNew && r._isEdited)
+    .map(r => {
+      const { _rowId, _isEdited, ...rowData } = r;
+      return { id: _rowId, rowData };
+    });
+
+  try {
+    await api.put(`/files/${id}/data`, {
+      updates,
+      deletedColumns: deletedCols,
+      deletedRows
+    });
+  } catch {
+    return addToast('Failed to save changes','error');
+  }
+
+  const fresh = {
+    data: data.map(r=>{ delete r._isEdited; return r; }),
+    cols,
+    deletedCols: [],
+    deletedRows: []
   };
+  reset(fresh);
+  addToast('Changes saved!','success');
+}, [data, deletedCols, deletedRows, id, addToast, reset, cols]);
+
 
   // Download CSV 
   const handleDownload = () => {
