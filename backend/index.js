@@ -38,7 +38,10 @@ function generateSessionId() {
 }
 
 // ---- Middleware ----
-app.use(cors({ origin: 'http://localhost:3000'}));    //   , credentials: true  //credentials: true is required to send/receive cookies (for auth).
+app.use(cors({
+  origin: 'https://csv-nest.netlify.app/',  // 👈 your Netlify frontend URL
+  credentials: true
+}));   //   , credentials: true  //credentials: true is required to send/receive cookies (for auth).
 app.use(express.json());
 //app.use(cookieParser());
 
